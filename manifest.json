@@ -2,8 +2,8 @@
   "name": "Quickfy",
   "description": "verify the legitimacy of any article/text using Quickfy. Select the text and verify.",
   "version": "1.0",
-  "permission":["storage","acriveTabs","scripting"],
-  "host_permission":["<all_urls>"],
+  "permissions":["storage","activeTab","scripting"],
+  "host_permissions":["<all_urls>"],
   "background":{
     "service_worker":"background.js"
   },
@@ -14,7 +14,7 @@
   "content_scripts":[
     {
       "matches":["<all_urls>"],
-      "content":["content.js"],
+      "js":["content.js"],
       "css":["style.css"]
     }
   ]

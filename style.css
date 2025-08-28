@@ -1,0 +1,43 @@
+.verify-btn {
+  padding: 6px 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 9999;
+  font-size: 14px;
+}
+
+.verify-btn:hover {
+  background: #0056b3;
+}
+
+.verify-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100%;
+  background: white;
+  border-left: 2px solid #ddd;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+  padding: 15px;
+  font-family: sans-serif;
+  overflow-y: auto;
+  z-index: 9999;
+}
+
+.verify-sidebar button {
+  background: #dc3545;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.verify-sidebar button:hover {
+  background: #b02a37;
+}
