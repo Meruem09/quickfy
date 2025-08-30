@@ -9,8 +9,9 @@
   },
   "manifest_version": 3,
   "action": {
-    "default_title": "Quickfy"
-    
+    "default_title": "Quickfy",
+    "default_popup": "quickfy.html",
+    "default_icon": "quickfy_extensions.png"
   },
   "content_scripts":[
     {
