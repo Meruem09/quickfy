@@ -2,7 +2,7 @@
   "name": "Quickfy",
   "description": "verify the legitimacy of any article/text using Quickfy. Select the text and verify.",
   "version": "1.0",
-  "permissions":["storage","activeTab","scripting"],
+  "permissions":["storage","activeTab","scripting","sidePanel"],
   "host_permissions":["<all_urls>"],
   "background":{
     "service_worker":"background.js"
@@ -10,6 +10,7 @@
   "manifest_version": 3,
   "action": {
     "default_title": "Quickfy"
+    
   },
   "content_scripts":[
     {
