@@ -85,7 +85,7 @@ function createVerifyButtonAtSelectionEnd(selection) {
 
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`)
       // below is fake data value
-      const data = "sknvnvdkvd wnlewnfnf wefknwflkernflke  backend URL in content.js (VERIFY_API_URL).Failed to verify text. Please configure the backend URL in content.js (VERIFY_API_URL).Failed to verify text. Please configure the backend URL in content.js (VERIFY_API_URL).Failed to verify text. Please configure the backend URL in content.js (VERIFY_API_URL).Failed to verify text. Please configure the backend URL in content.js (VERIFY_API_URL).Failed to verify text. Please configure the backend URL in content.js (VERIFY_API_URL).Failed to verify text. Please configure the backend URL in content.js (VERIFY_API_URL)."
+      const data = "sknvnvdkvd  backend URL in content.js (VERIFY_API_URL).Failed to verify text. Please configure the backend URL in content.js (VERIFY_API_URL).Failed to verify text. Please configure the backend URL in content.js (VERIFY_API_URL).Failed to verify text. Please configure the backend URL in content.js (VERIFY_API_URL).Failed to verify text. Please configure the backend URL in content.js (VERIFY_API_URL).Failed to verify text. Please configure the backend URL in content.js (VERIFY_API_URL).Failed to verify text. Please configure the backend URL in content.js (VERIFY_API_URL)."
       showSidebar(data)
     } catch (error) {
       console.error("Fetch error:", error)
