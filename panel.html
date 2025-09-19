@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Text Verifier</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 16px;
+      width: 300px;
+      min-height: 400px;
+      background-color: #181818; /* Slightly darker for a sleeker look */
+      color: #e6e6e6; /* Softer light text for readability */
+      display: flex;
+      flex-direction: column;
+      gap: 12px; /* Reduced gap for tighter layout */
+      transition: background-color 0.3s ease; /* Smooth background transitions */
+    }
+    .logo {
+      width: 80px; /* Slightly smaller logo for balance */
+      margin: 8px auto;
+      display: block;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)); /* Subtle shadow for depth */
+    }
+    #sidebarContent {
+      flex: 1;
+      overflow-y: auto;
+      font-size: 13px; /* Slightly smaller for compact appearance */
+      line-height: 1.6; /* Improved readability */
+      padding: 8px;
+      border-radius: 8px;
+      background-color: #1e1e1e; /* Subtle background for content area */
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 16px; /* Softer, more modern border radius */
+      font-size: 11px; /* Smaller for a refined look */
+      font-weight: 500; /* Medium weight for balance */
+      margin-bottom: 8px;
+      transition: transform 0.2s ease; /* Smooth hover effect */
+    }
+    .badge:hover {
+      transform: translateY(-1px); /* Subtle lift on hover */
+    }
+    .badge-true { background-color: #2e7d32; color: #ffffff; }
+    .badge-false { background-color: #d32f2f; color: #ffffff; }
+    .badge-unknown { background-color: #616161; color: #ffffff; }
+    .score {
+      margin: 8px 0;
+      font-size: 13px;
+      color: #b0b0b0; /* Softer color for secondary info */
+    }
+    blockquote {
+      border-left: 3px solid #4fc3f7; /* Brighter accent color for emphasis */
+      padding-left: 10px;
+      margin: 8px 0;
+      color: #b0b0b0;
+      font-style: italic;
+      background-color: #222222; /* Subtle background for contrast */
+      border-radius: 4px;
+    }
+    h4 {
+      margin: 8px 0 4px;
+      font-size: 13px;
+      font-weight: 600; /* Bolder for hierarchy */
+      color: #ffffff;
+    }
+    ul {
+      padding-left: 14px;
+      margin: 8px 0;
+    }
+    li {
+      margin-bottom: 6px;
+      color: #d0d0d0; /* Slightly lighter for readability */
+    }
+    a {
+      color: #4fc3f7;
+      text-decoration: none;
+      transition: color 0.2s ease; /* Smooth color transition */
+    }
+    a:hover {
+      color: #81d4fa; /* Lighter hover color */
+      text-decoration: none; /* Remove underline for cleaner look */
+    }
+    .input-container {
+      position: sticky;
+      bottom: 0;
+      background-color: #181818; /* Seamless integration with body */
+      padding: 8px 0;
+      border-top: 1px solid #2c2c2c; /* Subtle separator */
+      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    }
+    #verifyInput {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 10px; /* Softer, modern radius */
+      background-color: #222222; /* Darker input background */
+      color: #e6e6e6;
+      font-size: 13px;
+      box-sizing: border-box;
+      outline: none;
+      transition: background-color 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
+    }
+    #verifyInput::placeholder {
+      color: #757575;
+      opacity: 0.8; /* Slightly more visible placeholder */
+    }
+    #verifyInput:focus {
+      background-color: #2a2a2a;
+      box-shadow: 0 0 0 2px #4fc3f7 inset; /* Inset shadow for focus */
+    }
+    .input-container button {
+      margin-top: 8px;
+      width: 100%;
+      padding: 10px;
+      background-color: #4fc3f7; /* Bright accent color */
+      color: #ffffff;
+      border: none;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+    .input-container button:hover {
+      background-color: #81d4fa; /* Lighter on hover */
+      transform: translateY(-1px); /* Subtle lift */
+    }
+    .input-container button:active {
+      transform: translateY(0); /* Reset on click */
+    }
+  </style>
+</head>
+<body>
+  <img src="/logo.png" alt="Text Verifier Logo" class="logo">
+  <div id="sidebarContent"></div>
+  <div class="input-container">
+    <input type="text" id="verifyInput" placeholder="Enter text to verify...">
+    <button id="verifyButton">Verify</button>
+  </div>
+  <script src="panel.js"></script>
+</body>
+</html>

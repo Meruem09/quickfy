@@ -1,23 +1,33 @@
 {
-  "name": "Quickfy",
-  "description": "verify the legitimacy of any article/text using Quickfy. Select the text and verify.",
-  "version": "1.0",
-  "permissions":["storage","activeTab","scripting","sidePanel"],
-  "host_permissions":["<all_urls>"],
-  "background":{
-    "service_worker":"background.js"
-  },
   "manifest_version": 3,
-  "action": {
-    "default_title": "Quickfy",
-    "default_popup": "quickfy.html",
-    "default_icon": "quickfy_extensions.png"
+  "name": "Text Verifier",
+  "version": "1.0",
+  "description": "Verify selected text with a backend API and show results in a side panel",
+  "permissions": [
+    "sidePanel",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
   },
-  "content_scripts":[
+  "content_scripts": [
     {
-      "matches":["<all_urls>"],
-      "js":["content.js"],
-      "css":["style.css"]
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": []
+    }
+  ],
+  "side_panel": {
+    "default_path": "panel.html"
+  },
+  "action": {
+    "default_title": "Text Verifier"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["logo.png"],
+      "matches": ["<all_urls>"]
     }
   ]
 }
